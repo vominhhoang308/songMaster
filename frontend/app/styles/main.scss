@@ -1,0 +1,21 @@
+.main__middle__container .row ul, .main__middle__container .row ol {
+	padding-left: 20px;
+}
+
+.main__middle__container {
+	width: 100%;
+}
+.homepage {
+	position: relative;
+	margin-top: 50%;
+	z-index: 111;
+	background: #fff;
+}
+
+.row {
+	padding: 45px 0;
+}
+.row.with__sep {
+	background: url('../images/lines.png') repeat-x left bottom;
+}
+

@@ -2,16 +2,12 @@ import 'angular';
 import 'angular-ui-router';
 import 'ngstorage';
 import 'angular-cookies';
-import 'angular-truncate-2';
-import 'angular-marked';
-import 'angular-touch';
 import 'angular-ui-bootstrap';
 
 import config from './core/config';
 import onConfig from './core/onConfig';
 import onRun from './core/onRun';
 
-import factories from './core/factoryMap';
 import services from './core/serviceMap';
 import components from './core/componentMap';
 import controllers from './core/controllerMap';
@@ -21,15 +17,10 @@ const requires = [
 	'ui.router',
 	'ngStorage',
 	'ngCookies',
-	'truncate',
-	'hc.marked',
-	'ngTouch',
-	'ui.bootstrap',
-	'rzModule'
+	'ui.bootstrap'
 ];
 
 const ingredients = {
-	factory: factories,
 	service: services,
 	component: components,
 	controller: controllers,

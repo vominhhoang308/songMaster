@@ -3,16 +3,15 @@ const routes = [
       name: 'home',
       opts: {
         url: '/home',
-        templateUrl: '/assets/angular/tpls/home.html'
+        templateUrl: './assets/angular/tpls/home.html'
       }
-  // }, {
-  //     name: 'layout',
-  //     opts: {
-  //       url: '',
-  //       abstract: true,
-  //       templateUrl: '/assets/angular/tpls/layout/layout.html',
-  //       auth: true
-  //     }
+  },
+  {
+    name: 'song',
+    opts: {
+      url: '/songs',
+      templateUrl: './assets/angular/tpls/songs.html'
+    }
   }
 ];
 
