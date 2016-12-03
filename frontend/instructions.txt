@@ -1,0 +1,34 @@
+
+This exercise is meant to test both your basic backend and front-end coding skills.
+It is cut into 2 parts:
+ - The backend part, we will ask you to implement a class and with it, you will be able to spawn a new api.
+ - The front-end part, you will be using the api made on the first part to build a front-end around it.
+
+Good luck! :)
+
+Backend (Python)
+ Instructions and all needed files are in the this file: api_test.zip
+ The End result should be the "songs.py" file implemented and an api running.
+
+
+Front-end (JavaScript and CSS)
+ For the front end part, you can use any frameworks, javascript version (ES6, TypeScript, plain vanilla JavaScript...) etc. you wish.
+ If you want to use a generator like yeoman to scaffold an app, it's perfectly fine.
+
+ * Displaying songs with their ratings
+ In this exercise you will build a web page that will display a list of songs and their ratings in a responsive grid.
+ Next to each song should be a button that will add a simple meta data attribute to the song in question.
+
+ 1) When loading, your web page should call the /songs route of the api and display the returned songs in a responsive grid sorted by their rating.
+    If you can't make a responsive grid, display the songs in any way you think would be best.
+ 2) Using CSS properties only, make a star badge that is as close to the attached picture as you can (button.png). Don't worry, it's ok to google "css star".
+    If you can't make the star indicator in the picture, make something that you think would be nice for displaying song ratings.
+ 3) Display the rating for each song using the star badge we created earlier (so for example for a song with 4 stars, display 4 stars).
+ 4) Display a button next to each song. The button, when clicked, should do a POST call to the API's /songs/<id>/meta route add a meta attribute with name "Clicked" and value "True" to the song.
+    After adding the metadata, the page should fetch and display the metadata for that song using a GET call to the same route route.
+
+ Bonus tasks
+ 1) Good at styling things? Add a navbar, style the songs into neat little cards or whatever else you can come up with.
+ 2) Before displaying the songs, filter out songs with difficulty less than ten in as few lines as possible.
+ 3) Group the songs by artist.
+ 4) Calculate the combined length of all song titles in as few lines as possible.

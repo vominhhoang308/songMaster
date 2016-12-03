@@ -1,0 +1,24 @@
+API Coding Test:
+=====================
+
+Instructions:
+Here is a small imagined backend problem that we would like you to solve!
+The problem consists of a boiler plate feature class, input data file and unit tests for the class. All tests are now failing since there is no implementation yet for the class. Once the class is implemented, all tests should pass.
+
+There is also a file for running the service locally as a REST API service. It is using Flask framework and you can start the API just by:
+python api.py
+The service is started in port 5005.
+
+Files:
+songs.py - Unimplemented Songs class. We need your help here!
+test_songs.py - Unit tests for songs.py. You can run them just by executing this file with the python interpreter.
+songs.json - Songs definition JSON file.
+
+
+General info/tips:
+- Use python 2.x
+- In addition to default python packages you should need only following libraries: xmlrunner, flask
+- All input and output data for Songs class should be in JSON format. This is just to simulate restful API response, definitely not a real world pattern.
+- Aim for clarity, not for the utmost optimized solution.
+- Input data can be assumed to be "perfect"
+- Tests assume that the data input file and songs.py is located at the same folder as the unit tests.
