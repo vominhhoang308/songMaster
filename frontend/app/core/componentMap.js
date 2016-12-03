@@ -1,7 +1,7 @@
-import songsComponent from '../components/songsComponent';
+import bwSongsComponent from '../components/songsComponent';
 
 const components = {
-	songsComponent: songsComponent
+	bwSongsComponent: bwSongsComponent
 };
 
 export default components;

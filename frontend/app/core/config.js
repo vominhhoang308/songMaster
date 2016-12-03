@@ -1,5 +1,5 @@
 const config = {
-	BASEURL: location.origin,
+	BASEURL: 'http://localhost:3000',
 };
 
 export default config;

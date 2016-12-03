@@ -4,7 +4,11 @@
 			<li>{{song.artist}}</li>
 			<li>{{song.title}}</li>
 			<li>{{song.difficulty}}</li>
-			<li>{{song.released}}</li>	
+			<li>{{song.released}}</li>
+			<a ng-click="$ctrl.postMetaTag($id)"><img src='https://s18.postimg.org/53vv2vgc9/button.png' border='0' alt='button'/></a>
+			<div class="rating">
+				<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+			</div>	
 		</ul>
 	</div>
 </div>

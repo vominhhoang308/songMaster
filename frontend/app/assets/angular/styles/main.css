@@ -1,17 +1,18 @@
-.main__middle__container .row ul, .main__middle__container .row ol {
-  padding-left: 20px; }
+h2.page__title {
+  font-size: 24px;
+  line-height: normal; }
 
-.main__middle__container {
-  width: 100%; }
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  width: 80px;
+  right: 0; }
 
-.homepage {
-  position: relative;
-  margin-top: 50%;
-  z-index: 111;
-  background: #fff; }
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+  content: "\2605";
+  position: absolute; }
 
-.row {
-  padding: 45px 0; }
-
-.row.with__sep {
-  background: url("../images/lines.png") repeat-x left bottom; }
+.listSong ul li img {
+  left: 0;
+  position: absolute; }

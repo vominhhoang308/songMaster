@@ -1,11 +1,12 @@
 from flask import Flask, request, session
 import json
-
+from flask_cors import CORS, cross_origin
 from songs import Songs
-
 
 #Start the API
 app = Flask(__name__)
+CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route('/songs', methods=['GET'])
 def get_all_songs():

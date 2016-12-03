@@ -5,7 +5,6 @@ const onRun = ['$rootScope', '$state', '$http', 'config', ($rootScope, $state, $
 	// register the translations that can not be evaluated in the expressions
 
 	$rootScope.$on("$stateChangeStart", (event, toState, toParams, fromState, fromParams) => {
-		console.log('abc');
 	});
 }];
 

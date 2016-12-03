@@ -3,3 +3,26 @@ h2.page__title {
 	line-height: normal;
 }
 
+.rating {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+	width: 80px;
+	right:0;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+	content: "\2605";
+	position: absolute;
+}
+
+.listSong {
+	ul {
+		li {
+			img {
+				left: 0;
+				position: absolute;
+			}
+		}
+	}
+}
+
