@@ -11,8 +11,13 @@ h2.page__title {
 .rating > span:hover:before,
 .rating > span:hover ~ span:before {
   content: "\2605";
-  position: absolute; }
+  position: absolute;
+  color: black; }
 
-.listSong ul li img {
-  left: 0;
-  position: absolute; }
+.row {
+  background-color: #9e9e9e; }
+  .row ul {
+    background-color: wheat; }
+
+.card ul:hover {
+  background-color: #dec9a2 !important; }

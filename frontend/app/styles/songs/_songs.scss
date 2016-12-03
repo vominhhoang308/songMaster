@@ -13,16 +13,22 @@ h2.page__title {
 .rating > span:hover ~ span:before {
 	content: "\2605";
 	position: absolute;
+	color: black;
 }
 
-.listSong {
+.row {
 	ul {
-		li {
-			img {
-				left: 0;
-				position: absolute;
-			}
-		}
+		background-color: wheat;
 	}
+	background-color: #9e9e9e;
+}
+
+.card {
+	ul {
+		&:hover {
+			background-color: #dec9a2 !important;
+		}	
+	}
+	
 }
 
