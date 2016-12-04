@@ -1,0 +1,21 @@
+* { margin: 0; padding: 0; }
+html { height: 101%; }
+body { background: #f2f2f2 url('images/bg-tile.png'); font-size: 62.5%; padding-bottom: 65px; }
+p { font-family: "Balthazar", "Droid Serif", serif; color: #565656; font-size: 1.8em; line-height: 1.4em; margin-bottom: 15px; padding-left: 35px; }
+h2 {  margin-bottom: 10px; text-decoration: underline;}
+small { font-family: "Balthazar", "Droid Serif", serif; color: #656565; font-size: 1.6em; display: block; margin-bottom: 6px; }
+
+/** @group personal settings **/
+#info { float: left; margin-bottom: 12px; }
+
+/** @group skills **/
+#skills-left { display: block; float: left; margin-right: 30px; }
+#skills-right { display: block; float: left;}
+
+/** @group clearfix **/
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.clearfix { 
+	display: inline-block; 
+}
+
+#w { margin: 0px 50px; padding: 20px 40px; padding-top: 35px; background: #fff; min-width: 260px; max-width: 900px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; -webkit-border-bottom-left-radius: 8px; -webkit-border-bottom-right-radius: 8px; -moz-border-radius-bottomleft: 8px; -moz-border-radius-bottomright: 8px; }
