@@ -1,7 +1,6 @@
 import 'angular';
 import 'angular-ui-router';
 import 'ngstorage';
-import 'angular-cookies';
 import 'angular-ui-bootstrap';
 
 import config from './core/config';
@@ -11,20 +10,17 @@ import onRun from './core/onRun';
 import services from './core/serviceMap';
 import components from './core/componentMap';
 import controllers from './core/controllerMap';
-import directives from './core/directiveMap';
 
 const requires = [
 	'ui.router',
 	'ngStorage',
-	'ngCookies',
 	'ui.bootstrap'
 ];
 
 const ingredients = {
 	service: services,
 	component: components,
-	controller: controllers,
-	directive: directives,
+	controller: controllers
 };
 
 window.app = angular.module('frontend', requires);

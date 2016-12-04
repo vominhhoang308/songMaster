@@ -1,5 +1,6 @@
 const bwNavbar = {
-	templateUrl: './assets/angular/tpls/navbar.html'
+	templateUrl: './assets/angular/tpls/navbar.html',
+	controller: 'navCtrl'
 };
 
 export default bwNavbar;

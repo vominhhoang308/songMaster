@@ -21,3 +21,7 @@ h2.page__title {
 
 .card ul:hover {
   background-color: #dec9a2 !important; }
+
+.active {
+  transform: translateX(0px) !important;
+  -webkit-transition: all 180ms ease-out; }

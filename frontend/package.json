@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.5.8",
-    "angular-cookies": "^1.5.8",
     "angular-ui-bootstrap": "^2.2.0",
     "angular-ui-router": "^0.3.1",
     "install": "^0.8.1",
