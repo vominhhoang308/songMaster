@@ -1,0 +1,54 @@
+<div class="container">
+	<div class = "searchBar">
+		<form style="margin-bottom: 10px; margin-top: 10px;" ng-submit="$ctrl.searchSong($ctrl.searchKey)">
+			<input type="text" ng-model="$ctrl.searchKey" placeholder="SEARCH YOUR SONG HERE" required>			
+			<input class="btn-info" type="submit" value="Search Song">	
+		</form>		
+	</div>
+
+	<div style="margin-bottom: 10px;">
+		<input type="button" ng-click="$ctrl.filterDifficultyLessThan10()" value="Less Than 10">
+		<input type="button" ng-click="$ctrl.sortAsc()" value="Sort Ascending">
+		<input type="button" ng-click="$ctrl.sortArtist()" value="Group Artist">
+		<input type="button" ng-click="$ctrl.sortDesc()" value="Sort Descending">
+		<input type="button" ng-click="$ctrl.fullSongList()" value="Full Song List">
+	</div>
+
+	<div class="row" ng-if="$ctrl.panel === 'allSong'">
+		<div ng-repeat="song in songs" class="col s12 m4">
+			<div class="card grey">
+				<ul class="card-content black-text">
+					<li><span class="card-title">{{song.artist}}</span></li>
+					<li><p>{{song.title}}</p></li>
+					<li><p>{{song.difficulty}}</p></li>
+					<li><p>{{song.released}}</p></li>
+					<a ng-click="$ctrl.postMetaTag($id)"><img src='https://s18.postimg.org/53vv2vgc9/button.png' border='0' alt='button'/></a>
+					<div class="rating">
+						<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+					</div>	
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="row" ng-if="$ctrl.panel === 'searchSong'">		
+		<div ng-repeat="song in searchSongs"  class="col s12 m4">
+			<div class="card grey">
+				<ul class="card-content black-text">
+					<li><span class="card-title">{{song.artist}}</span></li>
+					<li><p>{{song.title}}</p></li>
+					<li><p>{{song.difficulty}}</p></li>
+					<li><p>{{song.released}}</p></li>
+					<a ng-click="$ctrl.postMetaTag($id)"><img src='https://s18.postimg.org/53vv2vgc9/button.png' border='0' alt='button'/></a>
+					<div class="rating">
+						<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+					</div>	
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+
+	<input style="margin-bottom: 30px;" type="button" ng-if="$ctrl.panel === 'searchSong'" ng-click="$ctrl.switchPanel()" value="Back to Previous Stage">
+</div>
+
