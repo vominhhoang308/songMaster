@@ -8,18 +8,25 @@ const songsCtrl = ['$scope','songsService', ($scope, songsService) => {
 	vm.searchSong = searchSong;
 	vm.switchPanel = switchPanel;
 	vm.filterDifficultyLessThan10 = filterDifficultyLessThan10;
+	vm.fullSongList = fullSongList;
+	vm.sortDesc = sortDesc;
 
 	init();  
 
 	function init(){
 		songsService.fetchSong().then((data) => {
-			$scope.songs = data.data.sort(function(a,b){return (a.difficulty > b.difficulty) ? -1 : ((b.difficulty >a.difficulty) ? 1 : 0);} );
+			$scope.songs = data.data;
+			sortAsc();
 			vm.panel = 'allSong';			
 		});
 	}
 
 	function sortAsc(){
 		$scope.songs = $scope.songs.sort(function(a,b){return (a.difficulty > b.difficulty) ? 1 : ((b.difficulty >a.difficulty) ? -1 : 0);} );
+	}
+
+	function sortDesc(){
+		$scope.songs = $scope.songs.sort(function(a,b){return (a.difficulty > b.difficulty) ? -1 : ((b.difficulty >a.difficulty) ? 1 : 0);} );	
 	}
 
 	function sortArtist(){
@@ -40,18 +47,21 @@ const songsCtrl = ['$scope','songsService', ($scope, songsService) => {
 	}
 
 	function filterDifficultyLessThan10(){
-		$scope.songs = $scope.songs.filter(function(e){ 
-			e.difficulty > 10
+		$scope.filterList = [];
+		$scope.songs.forEach( function(element, index) {
+			if(element.difficulty < 10){
+				$scope.filterList[$scope.filterList.length] = element;				
+			}			
 		});
-		// $scope.songs.forEach( function(element, index) {
-		// 	if(element.difficulty < 10){
-				
-		// 	}
-		// });
+		$scope.songs = $scope.filterList;
 	}
 
 	function switchPanel(){
 		vm.panel = 'allSong';
+	}
+
+	function fullSongList(){
+		init();
 	}
 
 	return vm;
