@@ -10,6 +10,7 @@ import onRun from './core/onRun';
 import services from './core/serviceMap';
 import components from './core/componentMap';
 import controllers from './core/controllerMap';
+import directives from './core/directiveMap';
 
 const requires = [
 	'ui.router',
@@ -20,6 +21,7 @@ const requires = [
 const ingredients = {
 	service: services,
 	component: components,
+	directive: directives,
 	controller: controllers
 };
 

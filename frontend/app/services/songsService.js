@@ -7,6 +7,7 @@ const songsService = ['$http', 'config', ($http, config) => {
 	
 	service.fetchSong = fetchSong;
 	service.searchSong = searchSong;
+	service.postMetaTag = postMetaTag;
 
 	/*======================================
 	=            Implementation            =
@@ -23,11 +24,14 @@ const songsService = ['$http', 'config', ($http, config) => {
 	}
 
 	function postMetaTag(id){
-
+		let url = `${config.BASEURL}/songs/${id}/meta`;
+		return $http({
+			url: url,
+			method: 'POST'
+		});
 	}
 
 	function searchSong(key){
-		console.log("are you here1231312");
 		let url = `${config.BASEURL}/songs/search?phrase=${key}`;
 		return $http({
 			url:url,

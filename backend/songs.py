@@ -56,6 +56,10 @@ class Songs(object):
             that matched the search)
         '''
 
-        result = list(filter(lambda song: phrase.lower() in song['title'].lower() or phrase.lower() in song['artist'].lower(), self.songs))
+        result = list(
+            filter(
+                lambda song: phrase.lower() in song['title'].lower() or phrase.lower() in song['artist'].lower(), self.songs
+            )
+        )
 
         return json.dumps(result)

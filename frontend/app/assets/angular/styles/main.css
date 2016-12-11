@@ -2,17 +2,31 @@ h2.page__title {
   font-size: 24px;
   line-height: normal; }
 
-.rating {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-  width: 80px;
-  right: 0; }
+.isClicked {
+  opacity: 1;
+  border: 1px solid red; }
 
-.rating > span:hover:before,
-.rating > span:hover ~ span:before {
-  content: "\2605";
-  position: absolute;
-  color: black; }
+.clickButton {
+  opacity: 0.5; }
+
+.rating {
+  color: #a9a9a9;
+  margin: 0;
+  padding: 0; }
+
+ul.rating {
+  display: inline-block; }
+
+.rating li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 1px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer; }
+
+.rating .filled {
+  color: red; }
 
 .row {
   background-color: #9e9e9e; }
