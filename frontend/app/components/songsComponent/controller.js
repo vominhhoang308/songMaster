@@ -41,7 +41,6 @@ const songsCtrl = ['$scope','songsService', ($scope, songsService) => {
 		$scope.songs = $scope.songs.sort(function(a,b){return (a.ratings > b.ratings) ? -1 : ((b.ratings >a.ratings) ? 1 : 0);} );
 	}
 
-
 	function sortArtist(){
 		$scope.songs = $scope.songs.sort(function(a,b){return (a.artist > b.artist) ? 1 : ((b.difficulty >a.difficulty) ? -1 : 0);} );
 	}
@@ -97,7 +96,7 @@ const songsCtrl = ['$scope','songsService', ($scope, songsService) => {
 	}
 
 	function fullSongList(){
-		init();
+		vm.init();
 	}
 
 	return vm;

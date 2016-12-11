@@ -42,8 +42,8 @@
 					<h6>Release Date:</h6> <p>{{song.released}}</p>
 					<h6>Ratings:</h6>						
 					<div style="float:left;" star-rating rating-value="song.ratings" max="$ctrl.ratingMax" ></div>
-					<a style="margin-left:5px; " ng-click="$ctrl.postMetaTag($id)"><img src='https://s18.postimg.org/53vv2vgc9/button.png' margin-top='10' height='40' width='40' border='0' alt='button'></a>
-					
+					<a ng-hide="song.isClicked" class="clickButton" style="margin-left:5px; " ng-click="$ctrl.postMetaTag(song.id)"><img src='https://s18.postimg.org/53vv2vgc9/button.png' margin-top='10' height='40' width='40' border='0' alt='button'></a>
+					<img ng-show="song.isClicked" class="isClicked" style="margin-left:5px; " ng-click="$ctrl.postMetaTag(song.id)" src='https://s18.postimg.org/53vv2vgc9/button.png' margin-top='10' height='40' width='40' border='0' alt='button'>
 				</ul>
 
 			</div>
